@@ -52,7 +52,7 @@ the app rather than use the web version. If you have any issues downloading, mak
 
 Once you've downloaded Postman and signed in, you should see a screen like this:
 
-![postman welcome screen](postman-first-screen.png)
+![postman welcome screen](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-testing-apis-with-postman/master/postman-first-screen.png)
 
 To show what we can do with Postman, we're going to be using the
 [JSON Placeholder API][json placeholder], a free resource where we can try out
@@ -60,7 +60,7 @@ different requests. For our first request, we'll make a simple GET request to
 `https://jsonplaceholder.typicode.com/posts/1`. Enter the URL in Postman, and
 click send:
 
-![postman get request](postman-get-request.png)
+![postman get request](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-testing-apis-with-postman/master/postman-get-request.png)
 
 You'll see we receive a JSON object as a response!
 
@@ -112,7 +112,7 @@ JSON. Now we can add a JSON formatted string to the text area below the dropdown
 
 With all that in place, click send:
 
-![postman post request](postman-post-request.png)
+![postman post request](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-testing-apis-with-postman/master/postman-post-request.png)
 
 Success! The API has received our request and sent back a response representing
 a newly created `post`:
