@@ -6,6 +6,10 @@
 - Compose a request with a URL, HTTP verb, headers, and body
 - Test non-GET requests using Postman
 
+## Video Walkthrough
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2Uga5Dmj-dA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 ## HTTP Clients
 
 When developing a web application on Rails, our primary goal is to take **HTTP
