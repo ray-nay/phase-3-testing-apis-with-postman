@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
-- Understand how to use different kinds of clients to make requests
+- Use different kinds of clients to make requests
 - Compose a request with a URL, HTTP verb, headers, and body
 - Test non-GET requests using Postman
 
