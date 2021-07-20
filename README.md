@@ -6,25 +6,27 @@
 - Compose a request with a URL, HTTP verb, headers, and body
 - Test non-GET requests using Postman
 
-## Video Walkthrough
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2Uga5Dmj-dA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-
 ## HTTP Clients
 
-When developing a web application on Rails, our primary goal is to take **HTTP
-requests** and return an appropriate **response**, following the idea of
+When developing a web application with Sinatra, our primary goal is to take
+**HTTP requests** and return an appropriate **response**, following the idea of
 **client-server** communication. So far, we've been using one particular client
 to interact with our server: the browser!
 
 It's straightforward to use the browser to make a GET request &mdash; all we
 have to do is enter an address in the browser's URL bar, such as
-`http://localhost:3000/birds`, and hit enter.
+`http://localhost:9292/games`, and hit enter.
 
-Following REST conventions, we'll need to make requests using **different HTTP
-verbs**, beyond just GET requests: for example, to **create** a new resource,
-we'll need to make a POST request. So we'll need a new tool to make these
-non-GET requests to our server.
+However, we also have learned a little about other HTTP verbs aside from `GET`,
+such as `POST`, `PATCH`, and `DELETE`. Using these other HTTP verbs is a strong
+convention when working with APIs in particular: they signal to developers that
+when we use these HTTP verbs in the request, the server is going to perform a
+specific kind of action, based on the HTTP verb:
+
+- **POST** (Create): create a new resource in a database
+- **GET** (Read): access/query information from a database
+- **PATCH** (Update): update one specific resource in a database
+- **DELETE** (Delete): delete one specific resource from a database
 
 We've seen how to make a POST request in JavaScript using fetch:
 
@@ -52,19 +54,26 @@ Client tool that will help with testing and development of our API.
 
 First, head to this page and download Postman:
 [https://www.postman.com/downloads/][postman download]. Make sure to download
-the app rather than use the web version. If you have any issues downloading, make sure to check out the [Postman docs][] for help.
+the app rather than use the web version. If you have any issues downloading,
+make sure to check out the [Postman docs][] for help.
 
 Once you've downloaded Postman and signed in, you should see a screen like this:
 
-![postman welcome screen](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-testing-apis-with-postman/master/postman-first-screen.png)
+![postman welcome screen](https://curriculum-content.s3.amazonaws.com/phase-4/testing-apis-with-postman/postman-welcome-screen.png)
 
 To show what we can do with Postman, we're going to be using the
 [JSON Placeholder API][json placeholder], a free resource where we can try out
 different requests. For our first request, we'll make a simple GET request to
-`https://jsonplaceholder.typicode.com/posts/1`. Enter the URL in Postman, and
-click send:
+`https://jsonplaceholder.typicode.com/posts/1`.
 
-![postman get request](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-testing-apis-with-postman/master/postman-get-request.png)
+Click on the plus sign to open a new tab. You should see a field where you can
+enter your request:
+
+![postman request field](https://curriculum-content.s3.amazonaws.com/phase-4/testing-apis-with-postman/postman-request-field.png)
+
+Enter the URL in the field and click send:
+
+![postman get request](https://curriculum-content.s3.amazonaws.com/phase-4/testing-apis-with-postman/postman-get-request.png)
 
 You'll see we receive a JSON object as a response!
 
@@ -99,7 +108,8 @@ Finally, we'll need some way of sending a JSON formatted string in the **body**
 of the request. Click the 'Body' tab in Postman, then click the dropdown and
 select 'raw' to specify that we are sending a raw string of data. Then, select
 JSON from the next dropdown to specify that the string will be formatted as
-JSON. Now we can add a JSON formatted string to the text area below the dropdown:
+JSON. Now we can add a JSON formatted string to the text area below the
+dropdown:
 
 ```json
 {
@@ -116,7 +126,7 @@ JSON. Now we can add a JSON formatted string to the text area below the dropdown
 
 With all that in place, click send:
 
-![postman post request](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-testing-apis-with-postman/master/postman-post-request.png)
+![postman post request](https://curriculum-content.s3.amazonaws.com/phase-4/testing-apis-with-postman/postman-post-request.png)
 
 Success! The API has received our request and sent back a response representing
 a newly created `post`:
@@ -147,9 +157,9 @@ over how the response is being sent, with a nice interface for customizing the
 HTTP verb, URL, headers, and body.
 
 In future lessons, we'll be expanding our API to handle non-GET requests, so
-being able a tool like Postman will make our API development much easier! It's
-also a great tool to use if you're exploring a third-party API for use in your
-projects.
+being able to use a tool like Postman will make our API development much easier!
+It's also a great tool to use if you're exploring a third-party API for use in
+your projects.
 
 ## Resources
 
