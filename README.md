@@ -6,6 +6,10 @@
 - Compose a request with a URL, HTTP verb, headers, and body
 - Test non-GET requests using Postman
 
+## Video Walkthrough
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2Uga5Dmj-dA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 ## HTTP Clients
 
 When developing a web application with Sinatra, our primary goal is to take
@@ -31,12 +35,15 @@ specific kind of action, based on the HTTP verb:
 We've seen how to make a POST request in JavaScript using fetch:
 
 ```js
-fetch("http://localhost:4000/birds", {
+fetch("http://localhost:9292/games", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
   },
-  body: JSON.stringify(newBird),
+  body: JSON.stringify({
+    title: "Breath of the Wild",
+    platform: "Switch",
+  }),
 });
 ```
 
