@@ -17,7 +17,7 @@ When developing a web application with Sinatra, our primary goal is to take
 **client-server** communication. So far, we've been using one particular client
 to interact with our server: the browser!
 
-It's straightforward to use the browser to make a GET request &mdash; all we
+It's straightforward to use the browser to make a GET request — all we
 have to do is enter an address in the browser's URL bar, such as
 `http://localhost:9292/games`, and hit enter.
 
