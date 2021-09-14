@@ -24,8 +24,8 @@ have to do is enter an address in the browser's URL bar, such as
 However, we also have learned a little about other HTTP verbs aside from `GET`,
 such as `POST`, `PATCH`, and `DELETE`. Using these other HTTP verbs is a strong
 convention when working with APIs in particular: they signal to developers that
-when we use these HTTP verbs in the request, the server is going to perform a
-specific kind of action, based on the HTTP verb:
+the server is going to perform a specific kind of action, based on which HTTP
+verb is used in the request:
 
 - **POST** (Create): create a new resource in a database
 - **GET** (Read): access/query information from a database
@@ -47,8 +47,8 @@ fetch("http://localhost:9292/games", {
 });
 ```
 
-However, needing to run a JavaScript application and write out code using
-`fetch` to test out our API in development would be quite a chore.
+However, running a JavaScript application and writing `fetch` requests to test
+out our API in development would be quite a chore.
 
 Luckily for us, there are some excellent tools out there to make interacting
 with APIs, and customizing all different parts of the request (the headers, HTTP
